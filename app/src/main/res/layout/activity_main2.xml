@@ -70,6 +70,8 @@
         android:gravity="center|center_vertical"
         android:textColor="#000000"
         android:textSize="30dp"
+        android:background="#C6C6C6"
+        android:hint="Introduce una palabra"
         app:layout_constraintBottom_toTopOf="@+id/guideline208"
         app:layout_constraintEnd_toStartOf="@+id/guideline105"
         app:layout_constraintStart_toStartOf="@+id/guideline101"
@@ -98,21 +100,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.23" />
+        app:layout_constraintGuide_percent="0.10" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline103"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.46" />
+        app:layout_constraintGuide_percent="0.50" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline104"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.75" />
+        app:layout_constraintGuide_percent="0.90" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline105"
@@ -148,7 +150,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.39" />
+        app:layout_constraintGuide_percent="0.43" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline205"
