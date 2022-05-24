@@ -21,10 +21,11 @@
         app:layout_constraintStart_toStartOf="@+id/guideline101"
         app:layout_constraintTop_toTopOf="@+id/guideline201"
         />
+
     <ImageView
         android:id="@+id/tvImagen"
-        android:layout_height="0dp"
         android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_margin="5dp"
         android:gravity="center|center_vertical"
         android:textColor="#000000"
@@ -33,7 +34,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline104"
         app:layout_constraintStart_toStartOf="@+id/guideline102"
         app:layout_constraintTop_toTopOf="@+id/guideline202"
-        />
+        app:srcCompat="@drawable/img0" />
     <TextView
         android:id="@+id/tvPalabra"
         android:layout_height="150px"
@@ -42,7 +43,7 @@
         android:gravity="center|center_vertical"
         android:text=""
         android:textColor="#000000"
-        android:textSize="20dp"
+        android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline206"
         app:layout_constraintEnd_toStartOf="@+id/guideline105"
         app:layout_constraintStart_toStartOf="@+id/guideline101"
@@ -63,7 +64,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline206"
         />
     <EditText
-        android:id="@+id/tvResultado"
+        android:id="@+id/etCaracter"
         android:layout_height="150px"
         android:layout_width="0dp"
         android:layout_margin="5dp"
@@ -78,7 +79,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline207"
         />
     <Button
-        android:id="@+id/btnSiguiente"
+        android:id="@+id/btComprobar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Comprobar"
