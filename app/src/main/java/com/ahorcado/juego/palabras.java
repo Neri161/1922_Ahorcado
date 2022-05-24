@@ -1,17 +1,23 @@
 package com.ahorcado.juego;
 
+import java.io.Serializable;
 import java.util.regex.*;
 import java.util.ArrayList;
 import java.util.*;
 
-public class palabras {
+public class palabras implements Serializable {
+    private String cadena;
     private boolean existe = false; //comprobación si palabra tiene caracter introducido
     public boolean palabraValida = false; // validación sí la palabra se ha validado
     public int contador = 0; // contador de letras acertadas
 
+    public palabras(String cadena) {
+        this.cadena = cadena;
+    }
+
     /* se devuelve lista string, se pide cadena de palabra inicial y letra de intento,
-    String cadena se podría cambiar por variable global*/
-    public List<String> validar(String cadena, String intento) {
+        String cadena se podría cambiar por variable global*/
+    public List<String> validar(String intento) {
         List<String> posiciones = new ArrayList<String>(); // lista de retorno, donde se almacenan los indices donde se encontraron caracteres iguales
         char[] aux = cadena.toCharArray(); // variable auxiliar se convierte la cadena en un arreglo char
         // inicio expresión regular comparación

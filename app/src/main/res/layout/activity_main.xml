@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/cardview_light_background">
 
     <TextView
         android:id="@+id/tvTitulo"
@@ -35,13 +36,14 @@
     app:layout_constraintTop_toTopOf="@+id/guideline202"
     />
     <EditText
-        android:id="@+id/tvResultado"
+        android:id="@+id/etPalabra"
         android:layout_height="150px"
         android:layout_width="0dp"
         android:layout_margin="5dp"
         android:gravity="center|center_vertical"
         android:textColor="#000000"
         android:textSize="30dp"
+        android:hint="Escriba una palabra"
         app:layout_constraintBottom_toTopOf="@+id/guideline204"
         app:layout_constraintEnd_toStartOf="@+id/guideline105"
         app:layout_constraintStart_toStartOf="@+id/guideline101"
