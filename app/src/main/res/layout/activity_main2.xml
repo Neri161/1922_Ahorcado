@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity2">
 
     <TextView
         android:id="@+id/tvTitulo"
@@ -20,20 +20,47 @@
         app:layout_constraintStart_toStartOf="@+id/guideline101"
         app:layout_constraintTop_toTopOf="@+id/guideline201"
         />
+    <ImageView
+        android:id="@+id/tvImagen"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_margin="5dp"
+        android:gravity="center|center_vertical"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline204"
+        app:layout_constraintEnd_toStartOf="@+id/guideline104"
+        app:layout_constraintStart_toStartOf="@+id/guideline102"
+        app:layout_constraintTop_toTopOf="@+id/guideline202"
+        />
     <TextView
-    android:id="@+id/tvPalabra"
-    android:layout_height="0dp"
-    android:layout_width="0dp"
-    android:layout_margin="5dp"
-    android:gravity="center|center_vertical"
-    android:text="Escriba una palabra: "
-    android:textColor="#000000"
-    android:textSize="30dp"
-    app:layout_constraintBottom_toTopOf="@+id/guideline203"
-    app:layout_constraintEnd_toStartOf="@+id/guideline105"
-    app:layout_constraintStart_toStartOf="@+id/guideline101"
-    app:layout_constraintTop_toTopOf="@+id/guideline202"
-    />
+        android:id="@+id/tvPalabra"
+        android:layout_height="150px"
+        android:layout_width="0dp"
+        android:layout_margin="5dp"
+        android:gravity="center|center_vertical"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline206"
+        app:layout_constraintEnd_toStartOf="@+id/guideline105"
+        app:layout_constraintStart_toStartOf="@+id/guideline101"
+        app:layout_constraintTop_toTopOf="@+id/guideline205"
+        />
+    <TextView
+        android:id="@+id/tvIntento"
+        android:layout_height="150px"
+        android:layout_width="0dp"
+        android:layout_margin="5dp"
+        android:gravity="center|center_vertical"
+        android:text="Introduce una letra:"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline207"
+        app:layout_constraintEnd_toStartOf="@+id/guideline105"
+        app:layout_constraintStart_toStartOf="@+id/guideline101"
+        app:layout_constraintTop_toTopOf="@+id/guideline206"
+        />
     <EditText
         android:id="@+id/tvResultado"
         android:layout_height="150px"
@@ -42,20 +69,20 @@
         android:gravity="center|center_vertical"
         android:textColor="#000000"
         android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline204"
+        app:layout_constraintBottom_toTopOf="@+id/guideline208"
         app:layout_constraintEnd_toStartOf="@+id/guideline105"
         app:layout_constraintStart_toStartOf="@+id/guideline101"
-        app:layout_constraintTop_toTopOf="@+id/guideline203"
+        app:layout_constraintTop_toTopOf="@+id/guideline207"
         />
     <Button
         android:id="@+id/btnSiguiente"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Siguiente"
-        app:layout_constraintBottom_toTopOf="@+id/guideline205"
+        android:text="Comprobar"
+        app:layout_constraintBottom_toTopOf="@+id/guideline209"
         app:layout_constraintEnd_toStartOf="@+id/guideline105"
         app:layout_constraintStart_toStartOf="@+id/guideline101"
-        app:layout_constraintTop_toTopOf="@+id/guideline204"
+        app:layout_constraintTop_toTopOf="@+id/guideline208"
         ></Button>
 
     <androidx.constraintlayout.widget.Guideline
@@ -84,7 +111,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.69" />
+        app:layout_constraintGuide_percent="0.75" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline105"
@@ -106,7 +133,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.15" />
+        app:layout_constraintGuide_begin="79dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline203"
@@ -120,27 +147,41 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.45" />
+        app:layout_constraintGuide_percent="0.39" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline205"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.60" />
+        app:layout_constraintGuide_percent="0.45" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline206"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.75" />
+        app:layout_constraintGuide_percent="0.56" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline207"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.90" />
+        app:layout_constraintGuide_percent="0.64" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline208"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.73" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline209"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.83" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
