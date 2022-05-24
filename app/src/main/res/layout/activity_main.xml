@@ -42,6 +42,7 @@
         android:layout_margin="5dp"
         android:gravity="center|center_vertical"
         android:textColor="#000000"
+        android:background="#C6C6C6"
         android:textSize="30dp"
         android:hint="Escriba una palabra"
         app:layout_constraintBottom_toTopOf="@+id/guideline204"
