@@ -42,10 +42,10 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (edtCaracter.getText().toString().length() < 2) {
-                   // List<String> aux = palabra.validar(edtCaracter.getText().toString());
-                    palabra.validarCadena(edtCaracter.getText().toString());
+                    String aux = palabra.validar(edtCaracter.getText().toString().toUpperCase());
                     if (palabra.isExiste()) {
-                        txtPalabra.setText(palabra.posiciones.toString());
+                        txtPalabra.setText(aux);
+                        edtCaracter.setText("");
                         if(palabra.isPalabraValida())
                         {
                             Toast toast = Toast.makeText(getApplicationContext(), "Ganaste", Toast.LENGTH_LONG);
@@ -57,7 +57,8 @@ public class MainActivity2 extends AppCompatActivity {
                     } else {
                         Intentos++;
                         cambiarImg();
-                        if (Intentos >= 6) {
+                        edtCaracter.setText("");
+                        if (Intentos > 6) {
                             Toast toast = Toast.makeText(getApplicationContext(), "Game Over!!", Toast.LENGTH_LONG);
                             toast.show();
                             Intent i = new Intent(MainActivity2.this, MainActivity.class);
@@ -70,12 +71,8 @@ public class MainActivity2 extends AppCompatActivity {
                     toast.show();
                     return;
                 }
-
-
             }
         });
-
-
     }
 
     public void cambiarImg() {

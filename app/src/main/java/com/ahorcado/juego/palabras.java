@@ -13,34 +13,18 @@ public class palabras implements Serializable {
     public List<String> posiciones = new ArrayList<>();
 
     public palabras(String cadena) {
-        this.cadena = cadena;
+        this.cadena = cadena.toUpperCase();
     }
 
-    public void llenarList(){
+    public void llenarList() {
         char[] aux = cadena.toCharArray();
-        for (int x = 0; x<aux.length; x++)
+        for (int x = 0; x < aux.length; x++)
             posiciones.add("_");
-    }
-    public void validarCadena(String letra){
-        char[] aux = cadena.toCharArray();
-        existe =  false;
-        for (int i = 0; i < aux.length; i++){
-            if (letra.equals(String.valueOf(aux[i]))){
-                posiciones.set(i,aux[i]+"");
-                existe = true;
-            }
-        }
-        String auxCadena = "";
-        for (String pos:posiciones){
-            auxCadena+= pos;
-        }
-        if(auxCadena.equals(cadena))
-            palabraValida = true;
     }
     /* se devuelve lista string, se pide cadena de palabra inicial y letra de intento,
         String cadena se podría cambiar por variable global*/
-    public List<String> validar(String intento) {
-         // lista de retorno, donde se almacenan los indices donde se encontraron caracteres iguales
+    public String validar(String intento) {
+        // lista de retorno, donde se almacenan los indices donde se encontraron caracteres iguales
         char[] aux = cadena.toCharArray(); // variable auxiliar se convierte la cadena en un arreglo char
         // inicio expresión regular comparación
         Pattern pat = Pattern.compile(intento);
@@ -49,7 +33,6 @@ public class palabras implements Serializable {
         if (mat.find()) {
             existe = true;
         } else {
-            posiciones.add("NULL"); // se retornará NULL en lista en caso de no coincidir con nada
             existe = false;
         }
         try {
@@ -57,7 +40,7 @@ public class palabras implements Serializable {
                 for (int i = 0; i < aux.length; i++) {
                     char auxiliar = intento.charAt(0);
                     if (aux[i] == auxiliar) {
-                        posiciones.add(aux[i] + "");
+                        posiciones.set(i, aux[i] + "");
                         contador++; // contador para letras encontradas
                     }
                 }
@@ -68,8 +51,13 @@ public class palabras implements Serializable {
         } catch (Exception e) {
             palabraValida = false;
         }
-        return posiciones;
+        String auxCadena = "";
+        for (String pos : posiciones) {
+            auxCadena += " "+pos+" ";
+        }
+        return auxCadena;
     }
+
     public String getCadena() {
         return cadena;
     }
