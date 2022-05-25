@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.view.KeyEvent;
+import android.view.View.OnKeyListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,38 +43,51 @@ public class MainActivity2 extends AppCompatActivity {
         btnComprobar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (edtCaracter.getText().toString().length() < 2) {
-                    String aux = palabra.validar(edtCaracter.getText().toString().toUpperCase());
-                    if (palabra.isExiste()) {
-                        txtPalabra.setText(aux);
-                        edtCaracter.setText("");
-                        if(palabra.isPalabraValida())
-                        {
-                            Toast toast = Toast.makeText(getApplicationContext(), "Ganaste", Toast.LENGTH_LONG);
-                            toast.show();
-                            Intent i = new Intent(MainActivity2.this, MainActivity.class);
-                            startActivity(i);
-                            return;
-                        }
-                    } else {
-                        Intentos++;
-                        cambiarImg();
-                        edtCaracter.setText("");
-                        if (Intentos > 6) {
-                            Toast toast = Toast.makeText(getApplicationContext(), "Game Over!!", Toast.LENGTH_LONG);
-                            toast.show();
-                            Intent i = new Intent(MainActivity2.this, MainActivity.class);
-                            startActivity(i);
-                            return;
-                        }
-                    }
-                } else {
-                    Toast toast = Toast.makeText(getApplicationContext(), "introduzca una letra con mas de 1 caracter!!!", Toast.LENGTH_SHORT);
+                procesoComprobar();
+            }
+        });
+        edtCaracter.setOnKeyListener(new OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+                if ((keyEvent.getAction() == KeyEvent.ACTION_DOWN) && (i == KeyEvent.KEYCODE_ENTER)) {
+                    procesoComprobar();
+                    return true;
+                }
+                return false;
+            }
+        });
+    }
+
+    public void procesoComprobar() {
+        if (edtCaracter.getText().toString().length() < 2) {
+            String aux = palabra.validar(edtCaracter.getText().toString().toUpperCase());
+            if (palabra.isExiste()) {
+                txtPalabra.setText(aux);
+                edtCaracter.setText("");
+                if (palabra.isPalabraValida()) {
+                    Toast toast = Toast.makeText(getApplicationContext(), "Ganaste", Toast.LENGTH_LONG);
                     toast.show();
+                    Intent i = new Intent(MainActivity2.this, MainActivity.class);
+                    startActivity(i);
+                    return;
+                }
+            } else {
+                Intentos++;
+                cambiarImg();
+                edtCaracter.setText("");
+                if (Intentos > 6) {
+                    Toast toast = Toast.makeText(getApplicationContext(), "Game Over!! \n Correcto: " + palabra.getCadena(), Toast.LENGTH_LONG);
+                    toast.show();
+                    Intent i = new Intent(MainActivity2.this, MainActivity.class);
+                    startActivity(i);
                     return;
                 }
             }
-        });
+        } else {
+            Toast toast = Toast.makeText(getApplicationContext(), "introduzca una letra con mas de 1 caracter!!!", Toast.LENGTH_SHORT);
+            toast.show();
+            return;
+        }
     }
 
     public void cambiarImg() {

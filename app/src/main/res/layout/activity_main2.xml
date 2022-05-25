@@ -73,6 +73,7 @@
         android:textSize="30dp"
         android:background="#C6C6C6"
         android:hint="Introduce una palabra"
+        android:maxLength="1"
         app:layout_constraintBottom_toTopOf="@+id/guideline208"
         app:layout_constraintEnd_toStartOf="@+id/guideline105"
         app:layout_constraintStart_toStartOf="@+id/guideline101"
