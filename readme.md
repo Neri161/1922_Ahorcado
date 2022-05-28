@@ -1,4 +1,6 @@
-#Matricula      Nombre
-#1319104640     Alvarez Esperon Neri Alejandro
-#1319104653     López Bautista Alfredo
-#1319104676     Pérez Ponce Anahí
+Universidad Politécnica de Tecámac
+Programación para móviles II
+1922IS
+Alvarez Esperon Neri Alejandro (1319104640)
+López Bautista Alfredo (#1319104653)
+Pérez Ponce Anahí (1319104676)
