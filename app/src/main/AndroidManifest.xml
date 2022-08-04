@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.1922_Ahorcado">
         <activity
+            android:name=".finalPoke"
+            android:exported="false" />
+        <activity
+            android:name=".Menu"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity2"
             android:exported="false" />
         <activity
