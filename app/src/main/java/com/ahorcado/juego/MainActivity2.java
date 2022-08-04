@@ -33,6 +33,7 @@ public class MainActivity2 extends AppCompatActivity {
         // inicialización de variables para interfaz
         txtPalabra = (TextView) findViewById(R.id.tvPalabra);
         palabra = (palabras) getIntent().getSerializableExtra("dato");
+        dato = (String) getIntent().getSerializableExtra("respuesta");
         imagen = (String) getIntent().getSerializableExtra("imagen");
         btnComprobar = (Button) findViewById(R.id.btComprobar);
         edtCaracter = (TextInputEditText) findViewById(R.id.etCaracter);
@@ -92,7 +93,10 @@ public class MainActivity2 extends AppCompatActivity {
                     // retorna aviso de perdia
                     Toast toast = Toast.makeText(getApplicationContext(), "Game Over!! \n Correcto: " + palabra.getCadena(), Toast.LENGTH_LONG);
                     toast.show();
-                    Intent i = new Intent(MainActivity2.this, MainActivity.class);
+                    Intent i = new Intent(MainActivity2.this, finalPoke.class);
+                    if(imagen.equals("NULO")){
+                        imagen="https://newfastuff.com/wp-content/uploads/2019/05/FKmUEAf.png";
+                    }
                     i.putExtra("dato", dato);
                     i.putExtra("imagen", imagen);
                     startActivity(i); // devuelve a MainActivity para reiniciar

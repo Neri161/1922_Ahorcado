@@ -42,9 +42,12 @@ public class Menu extends AppCompatActivity {
                             imagen = pokedex.getFront_default();
                             if (!respuesta.equals("")) {
                                 Intent intent = new Intent(Menu.this, MainActivity2.class);
-                                intent.putExtra("dato", respuesta);
+                                palabras palabras2 = new palabras(respuesta);
+                                intent.putExtra("dato", palabras2);
+                                intent.putExtra("respuesta", respuesta);
                                 intent.putExtra("imagen", imagen);
                                 startActivity(intent);
+                                muestraToast(respuesta);
                             }
                         }
                     }, 5000);

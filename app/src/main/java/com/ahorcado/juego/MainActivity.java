@@ -33,8 +33,10 @@ public class MainActivity extends AppCompatActivity {
                 } else if(palabra.getText().toString().length()>1){
                     //envía a MainActivity2 y se envía un extra "dato" del valor de palabras2
                     palabras palabras2 = new palabras(palabra.getText().toString());
+                    String respuesta=palabra.getText().toString();
                     Intent i = new Intent(MainActivity.this, MainActivity2.class);
                     i.putExtra("dato", palabras2);
+                    i.putExtra("respuesta", respuesta);
                     i.putExtra("imagen", "NULO");
                     startActivity(i);
                 }else {
