@@ -13,6 +13,8 @@ import android.widget.Toast;
 import android.view.KeyEvent;
 import android.view.View.OnKeyListener;
 
+import com.google.android.material.textfield.TextInputEditText;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +22,7 @@ public class MainActivity2 extends AppCompatActivity {
     public palabras palabra;
     public TextView txtPalabra;
     public Button btnComprobar;
-    public EditText edtCaracter;
+    public TextInputEditText edtCaracter;
     public ImageView image; // imagen para mostrar ahorcado
     public int Intentos = 0; // contador de intentos para validar palabras
     public String imagen ="",dato="";
@@ -33,7 +35,7 @@ public class MainActivity2 extends AppCompatActivity {
         palabra = (palabras) getIntent().getSerializableExtra("dato");
         imagen = (String) getIntent().getSerializableExtra("imagen");
         btnComprobar = (Button) findViewById(R.id.btComprobar);
-        edtCaracter = (EditText) findViewById(R.id.etCaracter);
+        edtCaracter = (TextInputEditText) findViewById(R.id.etCaracter);
         image = (ImageView) findViewById(R.id.tvImagen);
 
         String palabras = "";
