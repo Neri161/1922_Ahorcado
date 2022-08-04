@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/cardview_light_background"
     tools:context=".Menu">
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/md_theme_light_onPrimaryContainer"
+        android:text="@string/titulo"
+        android:textSize="45dp" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_subtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/md_theme_light_primary"
+        android:text="@string/subtitulo"
+        android:textSize="25dp" />
+    <Button
+        android:id="@+id/btn_solo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textSize="20dp"
+        style="?attr/materialButtonOutlinedStyle"
+        android:text="@string/solo" />
+    <Button
+        android:id="@+id/btn_amigos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        style="?attr/materialButtonOutlinedStyle"
+        android:textSize="20dp"
+        android:text="@string/amigos" />
+</LinearLayout>

@@ -31,7 +31,6 @@ public class MainActivity2 extends AppCompatActivity {
         // inicialización de variables para interfaz
         txtPalabra = (TextView) findViewById(R.id.tvPalabra);
         palabra = (palabras) getIntent().getSerializableExtra("dato");
-        dato = (String) getIntent().getSerializableExtra("dato");
         imagen = (String) getIntent().getSerializableExtra("imagen");
         btnComprobar = (Button) findViewById(R.id.btComprobar);
         edtCaracter = (EditText) findViewById(R.id.etCaracter);

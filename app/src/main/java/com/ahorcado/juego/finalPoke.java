@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
+//import com.squareup.picasso.Picasso;
 
 public class finalPoke extends AppCompatActivity {
 
@@ -25,7 +25,7 @@ public class finalPoke extends AppCompatActivity {
         String imagen = extras.getString("imagen");
         txtDato.setText("Palabra correcta: "+dato);
         if (!imagen.equals("NULO")) {
-            Picasso.get().load(imagen).error(R.mipmap.ic_launcher).into(img1);
+          //  Picasso.get().load(imagen).error(R.mipmap.ic_launcher).into(img1);
         }
         btnVolver.setOnClickListener(new View.OnClickListener() {
             @Override

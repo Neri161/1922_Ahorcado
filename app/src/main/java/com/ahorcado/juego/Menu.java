@@ -22,8 +22,8 @@ public class Menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        Button btnSolitario=(Button) findViewById(R.id.btComprobar);
-        Button btnAmigos=(Button) findViewById(R.id.btComprobar);
+        Button btnSolitario=(Button) findViewById(R.id.btn_solo);
+        Button btnAmigos=(Button) findViewById(R.id.btn_amigos);
         btnSolitario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -1,3 +1,21 @@
 <resources>
-    <string name="app_name">1922_Ahorcado</string>
+    <string name="app_name">1922IS_Ahorcado</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="titulo">Ahorcado UPT</string>
+    <string name="subtitulo">Elije el modo de juegos</string>
+    <string name="instrucciones">Introduce una palabra</string>
+    <string name="instruccione2">Introduce una letra</string>
+    <string name="Comenzar">Comenzar</string>
+    <string name="Comprobar">Comprobar Letra</string>
+    <string name="solo">Jugar Solo</string>
+    <string name="amigos">Jugar con amigos</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
 </resources>

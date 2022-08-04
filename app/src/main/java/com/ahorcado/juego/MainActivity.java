@@ -9,10 +9,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputEditText;
+
 public class MainActivity extends AppCompatActivity {
 
     Button siguiente;
-    EditText palabra;
+    TextInputEditText palabra;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         // variables de interfaz
         siguiente = (Button) findViewById(R.id.btnSiguiente);
-        palabra = (EditText) findViewById(R.id.etPalabra);
+        palabra = (TextInputEditText) findViewById(R.id.etPalabra);
         siguiente.setOnClickListener(new View.OnClickListener() { // función OnClick para botón siguiente
             @Override
             public void onClick(View view) {
